@@ -9,10 +9,7 @@
   "author": "Raghu,Vishnu",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "bcrypt-nodejs": "0.0.3",
-=======
->>>>>>> d1026155db9b5dce72c1f79f4d0741a54ad44cd4
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "mongoose": "^4.4.15",

@@ -3,7 +3,7 @@ var express=require('express');
 var bodyParser=require('body-parser');
 var morgan=require('morgan');
 var config=require('./config');
-<<<<<<< HEAD
+
 var mongoose=require('mongoose');
 
 var app=express();
@@ -19,15 +19,16 @@ mongoose.connect(config.database,function(err){
 	}
 });
 
-=======
 
-var app=express();
 
->>>>>>> d1026155db9b5dce72c1f79f4d0741a54ad44cd4
+
 //MiddleWare
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
+
+var api=require('./app/routes/api')(app,express);
+app.use('/api',api);
 
 //Routes
 app.get('/hello',function(req,res){
